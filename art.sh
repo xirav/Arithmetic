@@ -8,18 +8,14 @@ read -p "Enter the Digit b - " b
 read -p "Enter the Digit c - " c
 
 
-##first computation
 computation[0]=$(($a+$b*$c))
-##echo $computation
 
 computation[1]=$(($a*$b+$c))
-##echo $computation
 
 computation[2]=$(($c+(($a/$b))))
-##echo $computation
 
 computation[3]=$((($a%$b)+$c))
-
+##reading the values from the dict to the array and displaying
 echo ${computation[@]}
 
 
