@@ -12,4 +12,6 @@ echo $computation
 computation2=$(($a*$b+$c))
 echo $computation2
 
+computation3=$(($c+(($a/$b))))
+echo $computation3
 
