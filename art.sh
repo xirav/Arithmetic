@@ -9,4 +9,7 @@ read -p "Enter the Digit c - " c
 computation=$(($a+$b*$c))
 echo $computation
 
+computation2=$(($a*$b+$c))
+echo $computation2
+
 
