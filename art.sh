@@ -1,6 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash 
 
-
+n=4
 
 read -p "Enter the Digit a - " a
 read -p "Enter the Digit b - " b
@@ -22,7 +22,7 @@ for ((i=0 ; i < 5 ; i++ ))
 do
 	for (( j=0 ; j < 5-i-1 ; j++ ))
 	do
-		if [ ${computation[j]} -lt ${computation[$((j+1))]} ]
+		if [[ ${computation[j]} -gt ${computation[$((j+1))]} ]]
 		then
 			temp=${computation[$j]}
 			computation[$i]=${arr[$((j+1))]}
@@ -34,3 +34,19 @@ done
 
 echo ${computation[@]} 
 
+for (( i=0 ; i<$n ; i++ ))
+do
+	for (( j=$i ; j < $n ; j++ ))
+	do
+		if [ ${computation[i]} -lt ${computation[j]} ]
+		then
+			t=${computation[$i]}
+			computation[$i]=$computation{$j}
+			computation[$j]=$t
+		fi
+	done
+done
+for (( i=0 ;i < $n ;i++ ))
+do
+	echo ${computation[$i]}
+done
